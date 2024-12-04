@@ -1,4 +1,4 @@
-package com.quanxiaoha.xiaohashuauth.domain.dataobject;
+package com.quanxiaoha.xiaohashu.auth.controller;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -11,12 +11,8 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class UserDo {
-    private Long id;
-
-    private String username;
-
+public class User {
+    private String nickName;
     private LocalDateTime createTime;
 
-    private LocalDateTime updateTime;
 }

@@ -1,8 +1,7 @@
-package com.quanxiaoha.xiaohashuauth.controller;
+package com.quanxiaoha.xiaohashu.auth.controller;
 import com.quanxiaoha.framework.biz.operationlog.aspect.ApiOperationLog;
 import com.quanxiaoha.framework.common.response.Response;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
 
@@ -18,5 +17,9 @@ public class TestController {
     @ApiOperationLog(description = "测试接口2")
     public Response<User> localTest(){
         return Response.success(User.builder().nickName("chai").createTime(LocalDateTime.now()).build());
+    }
+    @PostMapping("/test3")
+    public Response<User> localTest3(@RequestBody User user){
+        return Response.success(user);
     }
 }
